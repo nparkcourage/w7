@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>시계</title>
-	<style>
-		p {
-		  font-family: verdana;
-		  font-size: 30px;
-		  color: blue;
-		}
-	</style>
+    <title>My Personal Home Page</title>
   </head>
   <body>
-    <h1>시계</h1>
-    <p id="clock"></p>
+    <header>
+      <h1>My Personal Home Page</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#my-skils">My Hobbies</a></li>
+        <li><a href="#contact-me">Contact Me</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="about-me">
+        <h2>About Me</h2>
+        <p>Hi, I am a student who is studing software. I live in South Korea.</p>
+      </section>
+      <section id="my-skils">
+        <h2>My Skils</h2>
+        <ul>
+          <li>Python</li>
+          <li>Web Program : HTML, CSS, JavaScript</li>
+          <li>VS Code</li>
+          <li>Docker Container</li>
+          <li>Linux</li>
+        </ul>
+      </section>
 
-    <script>
-      // 시계를 업데이트하는 함수
-      function updateClock() {
-        const now = new Date(); // 현재 날짜와 시간을 가져옵니다.
+      <section id="my-links">
+        <h2>My Link Pages</h2>
+        <ol>
+          <li><a href="hello1.html">Hello HTML</a></li>
+          <li><a href="hello2.html">Hello inline CSS</a></li>
+          <li><a href="hello3.html">Hello internal CSS</a></li>
+          <li><a href="hello4.html">Hello external CSS</a></li>
+          <li><a href="hello_javascript.html">Hello JavaScript</a></li>
+          <li><a href="date.html">현재 시간 출력</a></li>
+          <li><a href="clock.html">내 PC에서 실행되는 시계</a></li>
+        </ol>
+      </section>
 
-        const hours = now.getHours(); // 현재 시간 (0부터 23까지)
-        const minutes = now.getMinutes(); // 현재 분
-        const seconds = now.getSeconds(); // 현재 초
-
-        const clock = document.getElementById("clock"); // 시계를 표시할 요소를 찾습니다.
-
-        // 시간을 표시할 형식을 지정합니다.
-        const timeString = `${hours}:${minutes < 10 ? "0" + minutes : minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
-
-        clock.textContent = timeString; // 시계 요소의 텍스트를 업데이트합니다.
-      }
-
-      // 1초마다 시계를 업데이트합니다.
-      setInterval(updateClock, 1000);
-    </script>
+      <section id="contact-me">
+        <h2>Contact Me</h2>
+        <p>You can reach me at:</p>
+        <ul>
+          <li>Email: [Your Email]</li>
+          <li>Phone: [Your Phone Number]</li>
+          <li>Social Media: [Your Social Media Links]</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 My Personal Home Page</p>
+    </footer>
   </body>
 </html>
